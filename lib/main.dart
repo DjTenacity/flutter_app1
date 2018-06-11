@@ -13,6 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: 'Startup Name Generator',
+      theme: new ThemeData(
+        //通过配置ThemeData类轻松更改应用程序的主题
+        primaryColor: Colors.white,
+      ),
       home: new RandomWords(),
     );
 //    return new MaterialApp(
@@ -52,8 +56,51 @@ class RandomWordsState extends State<RandomWords> {
     return new Scaffold(
       appBar: new AppBar(
         title: new Text('Startup Name Generator'),
+        actions: <Widget>[
+          new IconButton(icon: new Icon(Icons.list), onPressed: _pushSaved),
+        ],
       ),
       body: _buildSuggestions(),
+    );
+  }
+
+  void _pushSaved() {
+    //当用户点击导航栏中的列表图标时，建立一个路由并将其推入到导航管理器栈中。此操作会切换页面以显示新路由。
+    //新页面的内容在在MaterialPageRoute的builder属性中构建，builder是一个匿名函数。
+    //添加Navigator.push调用，这会使路由入栈（以后路由入栈均指推入到导航管理器的栈）
+    Navigator.of(context).push(
+      new MaterialPageRoute(
+        builder: (context) {
+          final tiles = _saved.map(
+            (pair) {
+              //ListTile的divideTiles()方法在每个ListTile之间添加1像素的分割线。
+              // 该 divided 变量持有最终的列表项。
+              return new ListTile(
+                title: new Text(
+                  pair.asPascalCase,
+                  style: _biggerFont,
+                ),
+              );
+            },
+          );
+
+          final divided = ListTile
+              .divideTiles(
+                context: context,
+                tiles: tiles,
+              )
+              .toList();
+          //导航器会在应用栏中添加一个“返回”按钮。你不必显式实现Navigator.pop
+          //返回一个Scaffold，其中包含名为“Saved Suggestions”的新路由的应用栏。
+          // 新路由的body由包含ListTiles行的ListView组成; 每行之间通过一个分隔线分隔
+          return new Scaffold(
+            appBar: new AppBar(
+              title: new Text('Saved Suggestions'),
+            ),
+            body: new ListView(children: divided),
+          );
+        },
+      ),
     );
   }
 
