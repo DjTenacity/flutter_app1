@@ -84,12 +84,10 @@ class RandomWordsState extends State<RandomWords> {
             },
           );
 
-          final divided = ListTile
-              .divideTiles(
-                context: context,
-                tiles: tiles,
-              )
-              .toList();
+          final divided = ListTile.divideTiles(
+            context: context,
+            tiles: tiles,
+          ).toList();
           //导航器会在应用栏中添加一个“返回”按钮。你不必显式实现Navigator.pop
           //返回一个Scaffold，其中包含名为“Saved Suggestions”的新路由的应用栏。
           // 新路由的body由包含ListTiles行的ListView组成; 每行之间通过一个分隔线分隔
