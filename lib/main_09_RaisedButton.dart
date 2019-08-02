@@ -13,24 +13,27 @@ class MyApp extends StatelessWidget {
         ));
   }
 }
+
 class LayoutDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RaisedButton(
       child: Text('女装'),
-      textColor: Theme.of(context).accentColor,
-      onPressed: (){
-      },
+      textColor: Theme
+          .of(context)
+          .accentColor,
+      onPressed: () {},
     );
   }
 }
+
 class LayoutDemo2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Wrap(
-      spacing:10,
-      runSpacing: 10,
+      spacing: 10.0,
+      runSpacing: 10.0,
       // direction: Axis.vertical,
       // alignment:WrapAlignment.spaceEvenly,
       // runAlignment: WrapAlignment.center,
@@ -60,18 +63,19 @@ class LayoutDemo2 extends StatelessWidget {
     );
   }
 }
+
 class LayoutDemo3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      height: 600,
-      width: 400,
+      height: 600.0,
+      width: 400.0,
       color: Colors.pink,
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(10.0),
       child: Wrap(
-        spacing:10,
-        runSpacing: 10,
+        spacing: 10.0,
+        runSpacing: 10.0,
         direction: Axis.vertical,
         // alignment:WrapAlignment.spaceEvenly,
         // runAlignment: WrapAlignment.center,
@@ -101,17 +105,21 @@ class LayoutDemo3 extends StatelessWidget {
     );
   }
 }
-class MyButton extends StatelessWidget{
+
+class MyButton extends StatelessWidget {
   final String text;
-  const MyButton(this.text,{Key key}) : super(key: key);
+
+  const MyButton(this.text, {Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return RaisedButton(
         child: Text(this.text),
-        textColor:Theme.of(context).accentColor,
-        onPressed: (){
-        }
+        textColor: Theme
+            .of(context)
+            .accentColor,
+        onPressed: () {}
     );
   }
 }

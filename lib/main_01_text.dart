@@ -52,7 +52,7 @@ class HomeContent2 extends StatelessWidget {
             ),
             borderRadius: BorderRadius.all(
               //  Radius.circular(150),    //圆形
-              Radius.circular(10),
+              Radius.circular(10.0),
             )),
         child: Text(
           "loveDJ , 想过去,现在, 未来.看人来人往,风卷残云.",
@@ -75,10 +75,10 @@ class HomeContent2 extends StatelessWidget {
         ),
         // padding:EdgeInsets.all(20),
 
-        // padding:EdgeInsets.fromLTRB(10, 30, 5, 0)
+        // padding:EdgeInsets.fromLTRB(10.0, 30, 5, 0)
 
-        margin: EdgeInsets.fromLTRB(10, 30, 5, 0),
-        // transform:Matrix4.translationValues(100,0,0) //位移
+        margin: EdgeInsets.fromLTRB(10.0, 30.0, 5.0, 0.0),
+        // transform:Matrix4.translationValues(10.00,0,0) //位移
         // transform:Matrix4.rotationZ(0.3) //旋转
         // transform:Matrix4.diagonal3Values(1.2, 1, 1)  xyz轴 缩放
         alignment: Alignment.bottomLeft,

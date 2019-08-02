@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
                   builder: (context) => MyApp08(title: '我是跳转传值')));
             },
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 20.0),
         ],
       ),
     );

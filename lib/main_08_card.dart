@@ -29,7 +29,7 @@ class LayoutDemo extends StatelessWidget {
     return ListView(
       children: listData.map((value) {
         return Card(
-          margin: EdgeInsets.all(10),
+          margin: EdgeInsets.all(10.0),
           child: Column(
             children: <Widget>[
               AspectRatio(
@@ -60,7 +60,7 @@ class LayoutDemo1 extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      width: 200,
+      width: 200.0,
       child: AspectRatio(
         aspectRatio: 2.0 / 1.0,
         child: Container(
@@ -79,11 +79,11 @@ class CardDemo extends StatelessWidget {
     return ListView(
       children: <Widget>[
         Card(
-          margin: EdgeInsets.all(10),
+          margin: EdgeInsets.all(10.0),
           child: Column(
             children: <Widget>[
               ListTile(
-                title: Text("张三", style: TextStyle(fontSize: 28)),
+                title: Text("张三", style: TextStyle(fontSize: 28.0)),
                 subtitle: Text("高级工程师"),
               ),
               ListTile(
@@ -96,11 +96,11 @@ class CardDemo extends StatelessWidget {
           ),
         ),
         Card(
-          margin: EdgeInsets.all(10),
+          margin: EdgeInsets.all(10.0),
           child: Column(
             children: <Widget>[
               ListTile(
-                title: Text("李四", style: TextStyle(fontSize: 28)),
+                title: Text("李四", style: TextStyle(fontSize: 28.0)),
                 subtitle: Text("高级工程师"),
               ),
               ListTile(
@@ -113,7 +113,7 @@ class CardDemo extends StatelessWidget {
           ),
         ),
         Card(
-          margin: EdgeInsets.all(10),
+          margin: EdgeInsets.all(10.0),
           child: Column(
             children: <Widget>[
               AspectRatio(
@@ -128,8 +128,8 @@ class CardDemo extends StatelessWidget {
                   child: Image.network(
                       "https://www.itying.com/images/flutter/2.png",
                       fit: BoxFit.cover,
-                      height: 60,
-                      width: 60),
+                      height: 60.0,
+                      width: 60.0),
                 ),
                 title: Text("xxxx"),
                 subtitle: Text("xxxxxxx"),
@@ -138,7 +138,7 @@ class CardDemo extends StatelessWidget {
           ),
         ),
         Card(
-          margin: EdgeInsets.all(10),
+          margin: EdgeInsets.all(10.0),
           child: Column(
             children: <Widget>[
               AspectRatio(

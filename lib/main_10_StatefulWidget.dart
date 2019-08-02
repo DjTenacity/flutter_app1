@@ -26,11 +26,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        SizedBox(height: 200),
+        SizedBox(height: 200.0),
         Chip(
           label: Text('${this.countNum}'),
         ),
-        SizedBox(height: 20),
+        SizedBox(height: 20.0),
         RaisedButton(
           child: Text('按钮'),
           onPressed: () {
@@ -58,7 +58,7 @@ class _HomePageState1 extends State<HomePage> {
             title: Text(value),
           );
         }).toList()),
-        SizedBox(height: 20),
+        SizedBox(height: 20.0),
         RaisedButton(
           child: Text("按钮"),
           onPressed: () {
@@ -80,9 +80,9 @@ class HomePage2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        SizedBox(height: 200),
+        SizedBox(height: 200.0),
         Text("${this.countNum}"),
-        SizedBox(height: 20),
+        SizedBox(height: 20.0),
         RaisedButton(
           child: Text("按钮"),
           onPressed: () {

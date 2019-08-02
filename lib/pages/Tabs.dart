@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'tabs/Home.dart';
+import 'HomePage.dart';
 import 'tabs/Category.dart';
 import 'tabs/Setting.dart';
 

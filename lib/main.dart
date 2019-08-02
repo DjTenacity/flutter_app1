@@ -1,107 +1,93 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp( MyApp());
+import 'pages/Tabs.dart';
 
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return MaterialApp(
-        home: Scaffold(
-          appBar: AppBar(title: Text('FlutterDemo')),
-          body: CardDemo(),
-        ));
+    return MaterialApp(home: Tabs()
+//        home:Tabs2()
+    );
   }
 }
 
-// Card 卡片组件块，内容可以由大多数类型的 Widget 构成，Card 具有圆角和阴影，这让它看起来有立体感
-class CardDemo extends StatelessWidget {
+class Tabs2 extends StatefulWidget {
+  Tabs2({Key key}) : super(key: key);
+
+  _TabsState createState() => _TabsState();
+}
+
+class _TabsState extends State<Tabs> {
+  int _currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return ListView(
-      children: <Widget>[
-        Card(
-          margin: EdgeInsets.all(10),
-          child: Column(
-            children: <Widget>[
-
-              ListTile(
-                title:Text("张三",style: TextStyle(fontSize: 28)) ,
-                subtitle: Text("高级工程师"),
-              ),
-              ListTile(
-                title:Text("电话：xxxxx") ,
-              ),
-              ListTile(
-                title:Text("地址：xxxxxx") ,
-              )
-
-            ],
-          ),
-        ),Card(
-          margin: EdgeInsets.all(10),
-          child: Column(
-            children: <Widget>[
-
-              ListTile(
-                title:Text("李四",style: TextStyle(fontSize: 28)) ,
-                subtitle: Text("高级工程师"),
-              ),
-              ListTile(
-                title:Text("电话：xxxxx") ,
-              ),
-              ListTile(
-                title:Text("地址：xxxxxx") ,
-              )
-
-            ],
-          ),
-        ) ,
-
-        Card(
-          margin: EdgeInsets.all(10),
-          child:Column(
-            children: <Widget>[
-              AspectRatio(
-                aspectRatio: 20/9,
-                child: Image.network("https://www.itying.com/images/flutter/2.png",fit: BoxFit.cover,),
-              ),
-              ListTile(
-                leading: ClipOval(
-                  child: Image.network("https://www.itying.com/images/flutter/2.png",fit: BoxFit.cover,height:60,width: 60),
-                ),
-                title: Text("xxxx"),
-                subtitle: Text("xxxxxxx"),
-
-              )
-
-            ],
-          ),
-
-        ),
-        Card(
-          margin: EdgeInsets.all(10),
-          child:Column(
-            children: <Widget>[
-              AspectRatio(
-                aspectRatio: 20/9,
-                child: Image.network("https://www.itying.com/images/flutter/3.png",fit: BoxFit.cover,),
-              ),
-              ListTile(
-                leading: CircleAvatar(
-                    backgroundImage:NetworkImage('https://www.itying.com/images/flutter/3.png')
-                ),
-                title: Text("xxxxxxxx"),
-                subtitle: Text("xxxxxxxxxx"),
-
-              )
-            ],
-          ),
-
-        )
-      ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Flutter Demo"),
+      ),
+      body: Text("tabBar"),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: this._currentIndex,
+        onTap: (int index) {
+          setState(() {
+            this._currentIndex = index;
+          });
+        },
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("首页")),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.category), title: Text("分类")),
+          BottomNavigationBarItem(icon: Icon(Icons.settings), title: Text("设置"))
+        ],
+      ),
     );
+  }
+}
+
+class _TabsState2 extends State<Tabs> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Flutter Demo"),
+      ),
+      body: Text("tabBar"),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 1,
+        onTap: (int index) {
+          print(index);
+        },
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("首页")),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.category), title: Text("分类")),
+          BottomNavigationBarItem(icon: Icon(Icons.settings), title: Text("设置"))
+        ],
+      ),
+    );
+  }
+}
+
+class MyApp2 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text("Flutter Demo"),
+          ),
+          body: Text("tabBar"),
+          bottomNavigationBar: BottomNavigationBar(
+            items: [
+              BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("首页")),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.category), title: Text("分类")),
+              BottomNavigationBarItem(icon: Icon(Icons.settings), title: Text("设置"))
+            ],
+          ),
+        ));
   }
 }

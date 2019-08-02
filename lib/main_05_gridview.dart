@@ -35,7 +35,7 @@ class GridViewContent extends StatelessWidget {
     return GridView.count(
       crossAxisSpacing: 20.0,
       mainAxisSpacing: 20.0,
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(10.0),
       crossAxisCount: 2,
       // 宽度和高度的比例
       childAspectRatio: 0.7,
@@ -44,7 +44,7 @@ class GridViewContent extends StatelessWidget {
     return GridView.count(
       crossAxisSpacing: 10.0,
       mainAxisSpacing: 10.0,
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(10.0),
       crossAxisCount: 2,
       // childAspectRatio:0.7,  //宽度和高度的比例
       children: this._getListData3(),
@@ -66,11 +66,11 @@ class GridViewContent extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Image.network(listData[index]['ImageUrl']),
-          SizedBox(height: 12),
+          SizedBox(height: 12.0),
           Text(
             listData[index]['title'],
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 20),
+            style: TextStyle(fontSize: 20.0),
           )
         ],
       ),
@@ -85,7 +85,7 @@ class GridViewContent extends StatelessWidget {
         alignment: Alignment.center,
         child: Text(
           '这是第$i条数据',
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          style: TextStyle(color: Colors.white, fontSize: 20.0),
         ),
         color: Colors.blue,
         // height: 400,  //设置高度没有反应
@@ -100,17 +100,17 @@ class GridViewContent extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Image.network(value['imageUrl']),
-            SizedBox(height: 12),
+            SizedBox(height: 12.0),
             Text(
               value['title'],
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 20),
+              style: TextStyle(fontSize: 20.0),
             )
           ],
         ),
         decoration: BoxDecoration(
             border: Border.all(
-                color: Color.fromRGBO(233, 233, 233, 0.9), width: 1)),
+                color: Color.fromRGBO(233, 233, 233, 0.9), width: 1.0)),
 
         // height: 400,  //设置高度没有反应
       );

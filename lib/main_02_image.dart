@@ -28,8 +28,8 @@ class ImageContent0 extends StatelessWidget {
           colorBlendMode: BlendMode.screen,
           fit: BoxFit.cover,
         ),
-        height: 300,
-        width: 300,
+        height: 300.0,
+        width: 300.0,
       ),
     );
   }
@@ -50,8 +50,8 @@ class ImageContent1 extends StatelessWidget {
           color: Colors.blue,
           fit: BoxFit.cover,
         ),
-        width: 300,
-        height: 800,
+        width: 300.0,
+        height: 800.0,
         decoration: BoxDecoration(color: Colors.yellow),
       ),
     );
@@ -64,12 +64,12 @@ class ImageContent2 extends StatelessWidget {
     // TODO: implement build
     return Center(
       child: Container(
-        width: 300,
-        height: 300,
+        width: 300.0,
+        height: 300.0,
 //        容器
         decoration: BoxDecoration(
             color: Colors.amberAccent,
-            borderRadius: BorderRadius.circular(150),
+            borderRadius: BorderRadius.circular(150.0),
             image: DecorationImage(
                 image: NetworkImage(
                     "https://mmbiz.qpic.cn/mmbiz_jpg/z1ViaEyjXTiaul0D8YkRE4zhl"
@@ -92,8 +92,8 @@ class ImageContent3 extends StatelessWidget {
           "https://mmbiz.qpic.cn/mmbiz_jpg/z1ViaEyjXTiaul0D8YkRE4zhl"
           "KboY4lj5WtaU0Qd7v9zfiaAh1cicqEBib6iaME3hoTulx87co566ml"
           "QyIpIXIrJIC0w/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1",
-          height: 100,
-          width: 100,
+          height: 100.0,
+          width: 100.0,
           fit: BoxFit.cover,
         ),
       ),

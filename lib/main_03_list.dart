@@ -18,7 +18,7 @@ class ListContent1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 180,
+      height: 180.0,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[
@@ -57,7 +57,7 @@ class ListContent2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(10.0),
       children: <Widget>[
         ListTile(
           leading: Icon(
@@ -66,19 +66,19 @@ class ListContent2 extends StatelessWidget {
           ),
           title: Text(
             "美团Java面试154道题分享！",
-            style: TextStyle(fontSize: 24),
+            style: TextStyle(fontSize: 24.0),
           ),
           subtitle: Text("Java集合22题"),
         ),
         ListTile(
-          leading: Icon(Icons.settings, size: 40),
+          leading: Icon(Icons.settings, size: 40.0),
           title: Text("美团Java面试154道题分享！"),
           subtitle: Text("JVM与调优 21题"),
         ),
         ListTile(
-          leading: Icon(Icons.pages, size: 40),
+          leading: Icon(Icons.pages, size: 40.0),
           title: Text("美团Java面试154道题分享！"),
-          subtitle: Text("设计模式 10题"),
+          subtitle: Text("设计模式 10.0题"),
         )
       ],
     );
@@ -89,7 +89,7 @@ class ListContent3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(10.0),
       children: <Widget>[
         Image.network(
             "https://upload-images.jianshu.io/upload_images/1785445-8756b0f4656"
@@ -99,11 +99,11 @@ class ListContent3 extends StatelessWidget {
             '我是一个标题',
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontSize: 28,
+              fontSize: 28.0,
             ),
           ),
-          height: 60,
-          padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+          height: 60.0,
+          padding: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
         ),
         Image.network(
             "https://upload-images.jianshu.io/upload_images/1785445-ca42d00b7"
@@ -113,11 +113,11 @@ class ListContent3 extends StatelessWidget {
             '我是一个标题',
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontSize: 28,
+              fontSize: 28.0,
             ),
           ),
-          height: 60,
-          padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
+          height: 60.0,
+          padding: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
         ),
         Image.network(
             "https://mmbiz.qpic.cn/mmbiz/CvQa8Yf8vq27KJ7pe3fSVIvrHkSictxEY2ECVKeKib"
