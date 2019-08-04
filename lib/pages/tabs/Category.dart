@@ -9,6 +9,17 @@ class CategoryPage extends StatefulWidget {
 class _CategoryPageState extends State<CategoryPage> {
   @override
   Widget build(BuildContext context) {
-    return Text("分类");
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        RaisedButton(
+          child: Text("跳转到 Mydemo07 页面"),
+          onPressed: (){
+            Navigator.pushNamed(context, '/Mydemo07');
+          },
+        )
+      ],
+    );
   }
 }

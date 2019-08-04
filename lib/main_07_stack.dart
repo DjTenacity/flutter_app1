@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(Mydemo());
+//void main() => runApp(Mydemo07());
 
-class Mydemo extends StatelessWidget {
+class Mydemo07 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text(" demo"),
-        ),
-        body: LayoutDemo(),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(" demo"),
       ),
+      body: LayoutDemo(),
     );
   }
 }
