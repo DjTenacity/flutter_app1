@@ -10,6 +10,31 @@ class Mydemo07 extends StatelessWidget {
       appBar: AppBar(
         title: Text(" demo"),
       ),
+      drawer: Drawer(
+          child: Column(
+        children: <Widget>[
+          DrawerHeader(
+            decoration: BoxDecoration(
+                color: Colors.yellow,
+                image: DecorationImage(
+                    image: NetworkImage(
+                        "https://www.itying.com/images/flutter/2.png"),
+                    fit: BoxFit.cover)),
+            child: ListView(
+              children: <Widget>[Text('我是一个头部')],
+            ),
+          ),
+          ListTile(
+            title: Text("个人中心"),
+            leading: CircleAvatar(child: Icon(Icons.people)),
+          ),
+          Divider(),
+          ListTile(
+            title: Text("系统设置"),
+            leading: CircleAvatar(child: Icon(Icons.settings)),
+          )
+        ],
+      )),
       body: LayoutDemo(),
     );
   }

@@ -18,6 +18,39 @@ class MyApp08 extends StatelessWidget {
       ),
       appBar: AppBar(title: Text(this.title)),
       body: LayoutDemo(),
+      drawer: Drawer(
+          child: Column(
+        children: <Widget>[
+          UserAccountsDrawerHeader(
+            accountName: Text(" 老师"),
+            accountEmail: Text("qwewewq@qq.com"),
+            currentAccountPicture: CircleAvatar(
+              backgroundImage:
+                  NetworkImage("https://www.itying.com/images/flutter/3.png"),
+            ),
+            decoration: BoxDecoration(
+                color: Colors.yellow,
+                image: DecorationImage(
+                    image: NetworkImage(
+                        "https://www.itying.com/images/flutter/2.png"),
+                    fit: BoxFit.cover)),
+            otherAccountsPictures: <Widget>[
+              Image.network("https://www.itying.com/images/flutter/4.png"),
+              Image.network("https://www.itying.com/images/flutter/5.png"),
+              Image.network("https://www.itying.com/images/flutter/6.png")
+            ],
+          ),
+          ListTile(
+            title: Text("个人中心"),
+            leading: CircleAvatar(child: Icon(Icons.people)),
+          ),
+          Divider(),
+          ListTile(
+            title: Text("系统设置"),
+            leading: CircleAvatar(child: Icon(Icons.settings)),
+          )
+        ],
+      )),
     );
   }
 }
