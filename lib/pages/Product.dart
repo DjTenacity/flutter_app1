@@ -23,7 +23,7 @@ class _ProductPageState extends State<ProductPage> {
               child: Text("跳转到商品详情"),
               onPressed: () {
                 Navigator.pushNamed(context, '/productinfo',arguments: {
-                  "pid":456
+                  "pid":456.0
                 });
               }
           ),      

@@ -22,7 +22,7 @@ class ButtonDemoPage extends StatelessWidget {
                     print('点击了');
                   },
                 ),
-                SizedBox(width: 20),
+                SizedBox(width: 20.0),
                 RaisedButton(
                   child: Text('有颜色的按钮'),
                   textColor: Colors.white,
@@ -31,49 +31,49 @@ class ButtonDemoPage extends StatelessWidget {
                     print('点击了');
                   },
                 ),
-                SizedBox(width: 20),
+                SizedBox(width: 20.0),
                 RaisedButton(
                   child: Text('阴影按钮'),
                   textColor: Colors.white,
                   color: Colors.blue,
-                  elevation: 10,
+                  elevation: 10.0,
                   onPressed: () {
                     print('点击了');
                   },
                 )
               ],
             ),
-            SizedBox(height: 40),
+            SizedBox(height: 40.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Container(
-                    height: 60,
-                    width: 200,
+                    height: 60.0,
+                    width: 20.0,
                     child: RaisedButton(
                       child: Text('有宽高的按钮'),
                       textColor: Colors.white,
                       color: Colors.blue,
-                      elevation: 10,
+                      elevation: 10.0,
                       onPressed: () {
                         print('点击了');
                       },
                     ))
               ],
             ),
-            SizedBox(height: 40),
+            SizedBox(height: 40.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Expanded(
                     child: Container(
-                  height: 60,
-                  margin: EdgeInsets.all(20),
+                  height: 60.0,
+                  margin: EdgeInsets.all(20.0),
                   child: RaisedButton(
                     child: Text('全屏按钮'),
                     textColor: Colors.white,
                     color: Colors.blue,
-                    elevation: 10,
+                    elevation: 10.0,
                     onPressed: () {
                       print('点击了');
                     },
@@ -86,15 +86,15 @@ class ButtonDemoPage extends StatelessWidget {
               children: <Widget>[
                 Expanded(
                     child: Container(
-                  height: 60,
-                  margin: EdgeInsets.all(20),
+                  height: 60.0,
+                  margin: EdgeInsets.all(20.0),
                   child: RaisedButton(
                     child: Text('带圆角的按钮'),
                     textColor: Colors.white,
                     color: Colors.blue,
-                    elevation: 10,
+                    elevation: 10.0,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
+                      borderRadius: BorderRadius.circular(10.0),
                     ),
                     onPressed: () {
                       print('点击了');

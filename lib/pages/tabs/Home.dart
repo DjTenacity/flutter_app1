@@ -18,13 +18,13 @@ class _HomePageState extends State<HomePage> {
             onPressed: () {
               //路由跳转
               Navigator.pushNamed(context, '/search',arguments: {
-                "id":123
+                "id":123.0
               });
             },
             color: Theme.of(context).accentColor,
             textTheme: ButtonTextTheme.primary
         ),
-        SizedBox(height: 20),
+        SizedBox(height: 20.0),
         RaisedButton(
             child: Text("跳转到商品页面"),
             onPressed: () {
