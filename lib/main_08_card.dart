@@ -76,7 +76,7 @@ class LayoutDemo extends StatelessWidget {
                 leading: CircleAvatar(
                     backgroundImage: NetworkImage(value["imageUrl"])),
                 title: Text(value["title"]),
-                subtitle: Text(value["description"],
+                subtitle: Text(value["author"],
                     maxLines: 1, overflow: TextOverflow.ellipsis),
               )
             ],
@@ -108,7 +108,6 @@ class LayoutDemo1 extends StatelessWidget {
 class CardDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return ListView(
       children: <Widget>[
         Card(

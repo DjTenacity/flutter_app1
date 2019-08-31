@@ -24,23 +24,24 @@ class GridViewContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //注意
-    return GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisSpacing: 10.0, //水平子 Widget 之间间距
-          mainAxisSpacing: 10.0, //垂直子 Widget 之间间距
-          crossAxisCount: 3, //一行的 Widget 数量
-        ),
-        itemCount: listData.length,
-        itemBuilder: this._getListData);
-    return GridView.count(
-      crossAxisSpacing: 20.0,
-      mainAxisSpacing: 20.0,
-      padding: EdgeInsets.all(10.0),
-      crossAxisCount: 2,
-      // 宽度和高度的比例
-      childAspectRatio: 0.7,
-      children: this._getListData2(),
-    );
+//    return GridView.builder(
+//        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+//          crossAxisSpacing: 10.0, //水平子 Widget 之间间距
+//          mainAxisSpacing: 10.0, //垂直子 Widget 之间间距
+//          crossAxisCount: 3, //一行的 Widget 数量
+//        ),
+//        itemCount: listData.length,
+//        itemBuilder: this._getListData);
+
+//    return GridView.count(
+//      crossAxisSpacing: 20.0,
+//      mainAxisSpacing: 20.0,
+//      padding: EdgeInsets.all(10.0),
+//      crossAxisCount: 2,
+//      // 宽度和高度的比例
+//      childAspectRatio: 0.7,
+//      children: this._getListData2(),
+//    );
     return GridView.count(
       crossAxisSpacing: 10.0,
       mainAxisSpacing: 10.0,

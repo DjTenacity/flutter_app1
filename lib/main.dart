@@ -7,7 +7,8 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Tabs()
+    return MaterialApp(home: Tabs(),
+      debugShowCheckedModeBanner:false ,  //去掉debug图标
 //        home:Tabs2()
     );
   }
