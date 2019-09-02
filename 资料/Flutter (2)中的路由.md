@@ -12,7 +12,7 @@ Flutter 中的路由通俗的讲就是页面跳转。在 Flutter 中通过 Navig
 > 比如我们现在想从 HomePage 组件跳转到 SearchPage 组件。
 > 1、需要在 HomPage 中引入 SearchPage.dart
 > import '../SearchPage.dart';
->
+>pushNamed
 > 2、在 HomePage 中通过下面方法跳转
 
 ```dart

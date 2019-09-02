@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'res/listData.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MyApp9());
 
-class MyApp extends StatelessWidget {
+class MyApp9 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
