@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/AppBarDemoPage.dart';
 
 import '../main_07_stack.dart';
 import '../pages/Tabs.dart';
@@ -14,6 +15,7 @@ final routes = {
   '/productinfo': (context, {arguments}) =>
       ProductInfoPage(arguments: arguments),
   '/search': (context, {arguments}) => SearchPage(arguments: arguments),
+  '/appBarDemo': (context) => AppBarDemoPage(),
 };
 
 //固定写法

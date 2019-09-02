@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       // home:Tabs(),
         initialRoute: '/', //初始化的时候加载的路由 '/': (context) => Tabs(),
         onGenerateRoute: onGenerateRoute,
