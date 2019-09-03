@@ -28,12 +28,44 @@ class _TabsState extends State<Tabs> {
           icon: Icon(Icons.access_alarm),
           onPressed: () {
             print("Icons.access_alarm");
-          Navigator.pushNamed(context, '/appBarDemo');
+            Navigator.pushNamed(context, '/appBarDemo');
 //            Navigator.of(context).push(
 //                MaterialPageRoute(builder: (context) => AppBarDemoPage()));
           },
         ),
       ),
+//      floatingActionButton: FloatingActionButton(
+//        child: Icon(
+//          Icons.add,
+//          color: Colors.black26,
+//          size: 44,
+//        ),
+//      ),
+      floatingActionButton: Container(
+        width: 75,
+        height: 75,
+        padding: EdgeInsets.all(8.0),
+        margin: EdgeInsets.only(top: 15),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(40),
+          color: Colors.white,
+        ),
+        child: FloatingActionButton(
+          child: Icon(
+            Icons.add,
+            color: Colors.white,
+          ),
+          backgroundColor: this._currentIndex==1?Colors.red:Colors.blue,
+          onPressed: () {
+              // 重新渲染
+            setState(() {
+              //改变状态 , 重新渲染
+              this._currentIndex = 1;
+            });
+          },
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: this._pageList[this._currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: this._currentIndex,
@@ -52,8 +84,7 @@ class _TabsState extends State<Tabs> {
         //配置底部tabs可以有多个按钮
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("首页")),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.category), title: Text("分类")),
+          BottomNavigationBarItem(icon: Icon(Icons.category), title: Text("分类")),
           BottomNavigationBarItem(icon: Icon(Icons.settings), title: Text("设置"))
         ],
       ),
