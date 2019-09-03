@@ -12,12 +12,12 @@ class AppBarDemoPage extends StatelessWidget {
           title: Text("AppBarDemoPage"),
           // backgroundColor: Colors.red,
           centerTitle: true,
-          leading: IconButton(
-            icon: Icon(Icons.menu),
-            onPressed: () {
-              print('menu');
-            },
-          ),
+//          leading: IconButton(
+//            icon: Icon(Icons.menu),
+//            onPressed: () {
+//              print('menu');
+//            },
+//          ),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.search),
@@ -54,6 +54,57 @@ class AppBarDemoPage extends StatelessWidget {
             )
           ],
         ),
+        drawer: Drawer(
+          child: Column(
+            children: <Widget>[
+
+              Row(
+                children: <Widget>[
+                  Expanded(
+                      child: DrawerHeader(
+                          child: Text("你好flutter"),
+                          decoration:BoxDecoration(
+                              color: Colors.yellow,
+                              image: DecorationImage(
+                                image: NetworkImage("https://www.itying.com/images/flutter/2.png"),
+                                fit:BoxFit.cover,
+                              )
+
+                          )
+                      )
+                  )
+                ],
+              ),
+              ListTile(
+                leading: CircleAvatar(
+                    child: Icon(Icons.home)
+                ),
+                title: Text("我的空间"),
+              ),
+              Divider(),
+              ListTile(
+                leading: CircleAvatar(
+                    child: Icon(Icons.people)
+                ),
+                title: Text("用户中心"),
+              ),
+              Divider(),
+              ListTile(
+                leading: CircleAvatar(
+                    child: Icon(Icons.settings)
+                ),
+                title: Text("设置中心"),
+              ),
+              Divider(),
+            ],
+          ),
+
+
+        ),
+        endDrawer: Drawer(
+          child: Text('右侧侧边栏'),
+        ),
+
       ),
     );
   }

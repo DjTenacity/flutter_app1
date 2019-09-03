@@ -130,8 +130,8 @@ class IconContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      height: 10.0,
-      width: 10.0,
+      height: 40.0,
+      width: 40.0,
       color: this.color,
       child:
           Center(child: Icon(this.icon, size: this.size, color: Colors.white)),

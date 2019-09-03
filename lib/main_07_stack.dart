@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 class Mydemo07 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
       appBar: AppBar(
         title: Text(" demo"),
@@ -43,7 +42,6 @@ class Mydemo07 extends StatelessWidget {
 class LayoutDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Center(
       child: Container(
         height: 400.0,
@@ -76,7 +74,6 @@ class LayoutDemo extends StatelessWidget {
 class LayoutDemo1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Center(
       child: Container(
         height: 400.0,

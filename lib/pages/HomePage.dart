@@ -13,6 +13,8 @@ import '../main_09_RaisedButton.dart';
 import '../main_10_StatefulWidget.dart';
 import 'AppBarDemoPage.dart';
 import 'AppBarDemoPage2.dart';
+import 'Button.dart';
+import 'DrawerPageDemo.dart';
 import 'TabBarControllerPage.dart';
 
 class HomePage extends StatefulWidget {
@@ -153,7 +155,7 @@ class _HomePageState extends State<HomePage> {
                     color: Theme.of(context).accentColor,
                     textTheme: ButtonTextTheme.primary),
                 RaisedButton(
-                    child: Text("7-stack"),
+                    child: Text("7-stack与侧边栏"),
                     onPressed: () {
                       //路由跳转
                       Navigator.of(context).push(
@@ -204,6 +206,25 @@ class _HomePageState extends State<HomePage> {
                       //路由跳转
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => TabBarControllerPage()));
+                    },
+                    color: Theme.of(context).accentColor,
+                    textTheme: ButtonTextTheme.primary),
+                RaisedButton(
+                    child: Text("侧边栏"),
+                    onPressed: () {
+                      //路由跳转
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => DrawerPage()));
+                    },
+                    color: Theme.of(context).accentColor,
+                    textTheme: ButtonTextTheme.primary),
+
+                RaisedButton(
+                    child: Text("常用按钮"),
+                    onPressed: () {
+                      //路由跳转
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => ButtonDemoPage()));
                     },
                     color: Theme.of(context).accentColor,
                     textTheme: ButtonTextTheme.primary),
