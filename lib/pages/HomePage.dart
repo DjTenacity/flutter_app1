@@ -15,7 +15,10 @@ import 'AppBarDemoPage.dart';
 import 'AppBarDemoPage2.dart';
 import 'Button.dart';
 import 'DrawerPageDemo.dart';
+import 'FormPageDemo.dart';
+import 'Radio.dart';
 import 'TabBarControllerPage.dart';
+import 'TextFieldDemo.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -218,13 +221,40 @@ class _HomePageState extends State<HomePage> {
                     },
                     color: Theme.of(context).accentColor,
                     textTheme: ButtonTextTheme.primary),
-
                 RaisedButton(
                     child: Text("常用按钮"),
                     onPressed: () {
                       //路由跳转
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => ButtonDemoPage()));
+                    },
+                    color: Theme.of(context).accentColor,
+                    textTheme: ButtonTextTheme.primary),
+                RaisedButton(
+                    child: Text(" 登记表Demo"),
+                    onPressed: () {
+                      //路由跳转
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => FormDemoPage()));
+                    },
+                    color: Theme.of(context).accentColor,
+                    textTheme: ButtonTextTheme.primary),
+
+                RaisedButton(
+                    child: Text("Radio"),
+                    onPressed: () {
+                      //路由跳转
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => RadioDemo()));
+                    },
+                    color: Theme.of(context).accentColor,
+                    textTheme: ButtonTextTheme.primary),
+                RaisedButton(
+                    child: Text("表单,checkbox演示页面,bug删除字符时光标调到初始位置"),
+                    onPressed: () {
+                      //路由跳转
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => TextFiledDemo()));
                     },
                     color: Theme.of(context).accentColor,
                     textTheme: ButtonTextTheme.primary),
