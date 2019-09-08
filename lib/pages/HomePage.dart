@@ -239,13 +239,12 @@ class _HomePageState extends State<HomePage> {
                     },
                     color: Theme.of(context).accentColor,
                     textTheme: ButtonTextTheme.primary),
-
                 RaisedButton(
                     child: Text("Radio"),
                     onPressed: () {
                       //路由跳转
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => RadioDemo()));
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => RadioDemo()));
                     },
                     color: Theme.of(context).accentColor,
                     textTheme: ButtonTextTheme.primary),
@@ -258,6 +257,20 @@ class _HomePageState extends State<HomePage> {
                     },
                     color: Theme.of(context).accentColor,
                     textTheme: ButtonTextTheme.primary),
+                Wrap(
+                  children: <Widget>[
+                    Text("时间戳:" +
+                        (new DateTime.now()).millisecondsSinceEpoch.toString()),
+                    SizedBox(
+                      width: 20,
+                      height: 20,
+                    ),
+                    Text("时间戳转化为日期:" +
+                        (DateTime.fromMicrosecondsSinceEpoch(
+                                (new DateTime.now()).millisecondsSinceEpoch))
+                            .toString()),
+                  ],
+                )
               ],
             ),
           ),
