@@ -77,24 +77,6 @@ main() {
   }
 
   print(printUserInfo4('张三', age: 20, sex: '未知'));
+  print(printUserInfo4('张三'));
 
-//  实现一个 把方法当做参数的方法
-  var fn = () {
-    print('我是一个匿名方法');
-  };
-
-  fn();
-
-  //方法
-  fn1() {
-    print('fn1');
-  }
-
-  //方法
-  fn2(fn) {
-    fn();
-  }
-
-  //调用fn2这个方法 把fn1这个方法当做参数传入
-  fn2(fn1);
 }
