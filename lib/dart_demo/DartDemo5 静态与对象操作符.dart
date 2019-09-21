@@ -7,7 +7,8 @@ Dart中的静态成员:
 
 */
 
-import 'package:flutter_app/dart_demo/Animal.dart';
+
+import 'Animal.dart';
 
 class Person{
   static String name="loverDJ";

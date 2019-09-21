@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/pages/Tabs.dart';
+//import 'package:flutter_app/pages/Tabs.dart';
 
 class AppBarDemoPage2 extends StatefulWidget {
   AppBarDemoPage2({Key key}) : super(key: key);
